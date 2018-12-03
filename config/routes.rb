@@ -9,8 +9,13 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
 
 
-  resources :blogs
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :blogs do
+    member do
+      get :toggle_status
+    end
+  end
+
+
 
   root to: 'pages#home'
 end

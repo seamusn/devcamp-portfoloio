@@ -45,7 +45,9 @@ class BlogsController < ApplicationController
   def update
     respond_to do |format|
       if @blog.update(blog_params)
-        format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
+        format.html { 
+          redirect_to @blog,
+                      notice: 'Blog was successfully updated.' }
       else
         format.html { render :edit }
       end
@@ -85,7 +87,8 @@ class BlogsController < ApplicationController
     @blog = Blog.friendly.find(params[:id])
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+  # Never trust parameters from the scary internet,
+  # only allow the white list through.
   def blog_params
     params.require(:blog).permit(:title, :body)
   end

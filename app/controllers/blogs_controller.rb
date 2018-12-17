@@ -2,16 +2,21 @@
 
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[show edit update destroy toggle_status]
+  layout 'blog'
 
   # GET /blogs
   # GET /blogs.json
   def index
     @blogs = Blog.all
+    @page_title = 'My Portfolio Blog'
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
-  def show; end
+  def show
+    @page_title = @blog.title
+    @seo_keywords = @blog.body
+  end
 
   # GET /blogs/new
   def new
@@ -40,7 +45,9 @@ class BlogsController < ApplicationController
   def update
     respond_to do |format|
       if @blog.update(blog_params)
-        format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
+        format.html { 
+          redirect_to @blog,
+                      notice: 'Blog was successfully updated.' }
       else
         format.html { render :edit }
       end
@@ -80,7 +87,8 @@ class BlogsController < ApplicationController
     @blog = Blog.friendly.find(params[:id])
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+  # Never trust parameters from the scary internet,
+  # only allow the white list through.
   def blog_params
     params.require(:blog).permit(:title, :body)
   end

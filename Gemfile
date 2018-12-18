@@ -63,5 +63,11 @@ gem 'rails-erd', group: :development
 
 gem 'devise', '~> 4.5'
 
+gem 'bootstrap', '~> 4.1.3'
+
+gem 'jquery-rails'
+
+gem 'narron_view_tool', git: 'https://github.com/seamusn/narron_view_tool'
+
 
 

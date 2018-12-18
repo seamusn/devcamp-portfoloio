@@ -19,4 +19,8 @@ module ApplicationHelper
     end
   end
 
+  def copyright_generator
+    NarronViewTool::Renderer.copyright 'Seamus Narron', 'All rights reserved'
+  end
+
 end

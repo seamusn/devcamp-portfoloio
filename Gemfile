@@ -69,5 +69,7 @@ gem 'jquery-rails'
 
 gem 'narron_view_tool', git: 'https://github.com/seamusn/narron_view_tool'
 
+gem 'petergate', '~> 2.0', '>= 2.0.1'
+
 
 

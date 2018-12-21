@@ -77,5 +77,7 @@ gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'bootstrap_form'
 gem 'bootstrap4-kaminari-views'
 
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+
 
 

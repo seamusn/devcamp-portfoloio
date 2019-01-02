@@ -29,3 +29,5 @@
 #ignore ide files
 /.vscode/*
 /.idea/*
+
+.env

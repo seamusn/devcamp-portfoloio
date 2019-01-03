@@ -12,13 +12,16 @@
 
       <hr>
 
-      <% if @portfolio_item.technologies.any? %>
-        <h3>Technologies Used:</h3>
+      <h3>Technologies Used:</h3>
 
-        <% @portfolio_item.technologies.each do |t| %>
-          <p><%= t.name %></p>
-        <% end %>
-        <hr>
+      <% @portfolio_item.technologies.each do |t| %>
+        <p><%= t.name %></p>
+      <% end %>
+
+      <% if logged_in?(:site_admin) %>
+        <div class="">
+          <%= link_to "Edit Item", edit_portfolio_path(@portfolio_item), class: 'btn btn-warning'%>
+        </div>
       <% end %>
     </div>
   </div>

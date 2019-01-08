@@ -88,6 +88,8 @@ gem 'cocoon', '~> 1.2', '>= 1.2.12'
 
 gem 'gritter', '~> 1.2'
 
+gem 'twitter', '~> 6.2'
+
 
 
 

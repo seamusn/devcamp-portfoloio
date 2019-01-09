@@ -90,6 +90,6 @@ gem 'gritter', '~> 1.2'
 
 gem 'twitter', '~> 6.2'
 
-
+gem 'redis', '~> 4.1'
 
 

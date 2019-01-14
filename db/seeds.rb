@@ -1,5 +1,24 @@
 # frozen_string_literal: true
 
+User.create!(
+  email: 'test@test.com',
+  password: 'password',
+  password_confirmation: 'password',
+  name: 'Admin User',
+  roles: 'site_admin'
+)
+
+puts '1 Admin user created'
+
+User.create!(
+  email: 'test2@test.com',
+  password: 'password',
+  password_confirmation: 'password',
+  name: 'Regular User'
+)
+
+puts '1 Admin user created'
+
 3.times do |topics|
   Topic.create!(
     title: "Topic #{topics}"

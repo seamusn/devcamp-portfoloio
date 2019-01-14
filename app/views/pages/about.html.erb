@@ -6,7 +6,7 @@
 
     <div class="row">
       <div class="col-md-4">
-        <%= image_tag "profile.jpg", width: 300, alt: "Profile image", class: "profile-img" %>
+        <%= image_tag "profile.jpg", width: 300, alt: "Profile image", class: "profile-img img-fluid" %>
       </div>
       <div class="col-md-8">
         <p>
@@ -27,6 +27,51 @@
           chop rump t-bone bresaola. Leberkas filet mignon drumstick short loin
           landjaeger porchetta pastrami picanha ball tip pork ground round. Chuck
           cow flank biltong alcatra bacon burgdoggen spare ribs shankle.
+        </p>
+        <p>
+          <button
+              class="btn btn-primary"
+              type="button"
+              data-toggle="collapse"
+              data-target="#experience"
+              aria-expanded="false"
+              aria-controls="experience"
+          >
+            Experience
+          </button>
+
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded="false"
+            aria-controls="education"
+          >
+            Education
+          </button>
+        </p>
+
+        <p>
+          <div class="collapse" id="experience">
+            <div class="card card-block">
+              Job 1
+            </div>
+            <div class="card card-block">
+              Job 2
+            </div>
+          </div>
+        </p>
+
+        <p>
+        <div class="collapse" id="education">
+          <div class="card card-block">
+            School 1
+          </div>
+          <div class="card card-block">
+            School 2
+          </div>
+        </div>
         </p>
       </div>
     </div>
